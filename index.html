@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="content">
+	<meta name="author" content="content">
+	<link rel="shortcut icon" type="image/png" href="path">
+	<title>Calvin and Hobbes</title>
+	<link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>	
+	<!-- page container -->
+	<div id="page">
+		<!-- mobile header image -->
+		<img src="Images/mobile_header.png" id="mobile_header_image">
+
+		<!-- main page grid -->
+		<div id="main">
+			<!-- title banner -->
+			<div id="banner" class="comic-border">
+				<div id="banner_text_container">
+					<div id="banner_title">Calvin <small>and</small> Hobbes</div>
+					<div id="banner_author">By Bill Watterson</div>
+				</div>
+			</div>
+			
+			<!-- calendar container -->
+			<div id="calendar" class="content hidden"></div>
+
+			<!-- comics container -->
+			<div id="comics" class="content hidden"></div>	
+		
+			<!-- navbar -->
+			<div id="navbar" class="comic-border">
+				<!-- navbar header -->
+				<div id="navbar_header">
+					<div id="navbar_heading">
+						<!-- if on comics page -->
+						<span class="content-specific comics-specific">Currently</span>
+						<!-- if on calendar page -->
+						<span class="content-specific calendar-specific">Last</span>
+						reading:
+					</div>
+					<div id="navbar_date" onclick="comicJump(this);"></div>
+				</div>
+
+				<!-- navbar navigation links -->
+				<div id="navbar_links" class="content-specific comics-specific hidden">
+					<div class="navbar-link" id="nav_cal" onclick="changeContent('calendar');">Calendar</div>
+					<div class="navbar-link" id="nav_prev" onclick="comicBrowse('prev');">🢠 Previous</div>
+					<div class="navbar-link" id="nav_next" onclick="comicBrowse('next');">Next 🢡</div>
+				</div>
+
+				<!-- desktop navbar illustration -->
+				<img src="Images/navbar_illustration.png" id="desktop_navbar_image">
+			</div>
+
+			<!-- footer -->
+			<div id="footer" class="comic-border">
+				"It’s a magical world, Hobbes, ol’ buddy…Let’s go exploring!" - Calvin and Hobbes, 1985-1995
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="JS/scripts.js"></script>
+</body>
+
+</html>

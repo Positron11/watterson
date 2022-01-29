@@ -1,0 +1,204 @@
+/* font */
+@font-face {
+	font-family: Calvin and Hobbes;
+	src: url(../Assets/Fonts/Calvin_Hobbes/solid.ttf);
+}
+
+
+/* tags */
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	color: black;
+	font-size: 18px;
+	user-select: none;
+	font-family: "Calvin and Hobbes";
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* generic comic border style */
+.comic-border {
+	border: 0.56em solid transparent;
+	border-image-source: url(../Images/border.png);
+	border-image-repeat: round;
+	border-image-slice: 7%;
+}
+
+/* major containers */
+#page {
+	text-align: center;
+}
+#main {
+	gap: 1em;
+	padding: 1.5em;
+	align-items: start;
+	display: inline-grid;
+	grid-template-areas: "banner navbar" "content navbar" "footer footer";
+}
+
+/* mobile header image */
+#mobile_header_image {
+	width: 70%;
+	display: none;
+	max-width: 340px;
+	margin: 2em 0 -1em 0;
+}
+
+/* title banner */
+#banner {
+	padding: 1em 0;
+	text-align: center;
+	grid-area: banner;
+}
+#banner_text_container {
+	display: inline-block;
+}
+#banner_title {
+	font-size: 3em;
+}
+#banner_title small {
+	font-size: 0.4em;
+}
+#banner_author {
+	text-align: right;
+	font-size: 0.8em;
+}
+
+/* navbar */
+#navbar {
+	top: 0.3em;
+	width: 200px;
+	display: flex;
+	position: sticky;
+	padding: 1em 0 0 0;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	grid-area: navbar;
+}
+#navbar_heading {
+	font-size: 0.8em;
+}
+#navbar_date {
+	cursor: pointer;
+	font-size: 1.5em;
+	margin-bottom: 0.7em;
+}
+#navbar_links {
+	gap: 0.2em;
+	display: flex;
+	flex-direction: column;
+}
+#desktop_navbar_image {
+	width: 100%;
+	margin-top: 1em;
+}
+.navbar-link {
+	cursor: pointer;
+}
+.navbar-link.disabled {
+	color: #aaa;
+	cursor: not-allowed;
+}
+
+/* content hider classes */
+.content.hidden, .content-specific.hidden {
+	display: none !important;
+}
+
+/* calendar grid */
+#calendar {
+	gap: 0.3em;
+	display: grid;
+	align-items: center;
+	grid-template-rows: repeat(11, auto);
+	grid-template-columns: repeat(13, auto);
+	grid-area: content;
+}
+.calendar-month {
+	width: 1.49em;
+	cursor: pointer;
+	font-size: 0.9em;
+}
+.calendar-month.current {
+	transform: rotate(10deg);
+	animation: shake infinite 1s;
+}
+.calendar-month.disabled {
+	color: #aaa;
+	cursor: default;
+}
+
+/* comics container */
+#comics {
+	gap: 1em;
+	display: flex;
+	flex-direction: column;
+	grid-area: content;
+}
+#comics img {
+	max-width: 100%;
+}
+
+/* footer */
+#footer {
+	padding: 1em;
+	font-size: 0.9em;
+	grid-area: footer;
+}
+
+/* mobile devices */
+@media only screen and (max-width: 900px) {
+	#mobile_header_image {
+		display: unset;
+	}
+	#main {
+		padding: 1em;
+		gap: 0.5em;
+		grid-template-areas: "banner" "navbar" "content" "footer";
+	}
+	#navbar {
+		padding: 0 1em;
+		width: unset;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	#navbar_header {
+		display: flex;
+		align-items: center;
+	}
+	#navbar_date {
+		font-size: 1em;
+		margin: 0 auto 0 0.5em;
+	}
+	#navbar_links {
+		gap: 0.8em;
+		flex-direction: row;
+	}
+	#desktop_navbar_image {
+		display: none;
+	}
+}
+
+/* smaller mobile devices */
+@media only screen and (max-width: 640px) {
+	body {
+		font-size: 2.8vw;
+	}
+}
+
+/* shake animation */
+@keyframes shake {
+	0% { transform: skewX(-15deg); }
+	10% { transform: skewX(15deg); }
+	20% { transform: skewX(-15deg); }
+	30% { transform: skewX(15deg); }
+	40% { transform: skewX(0deg); }
+	100% { transform: skewX(0deg); }  
+}
