@@ -169,6 +169,10 @@ a {
 		width: unset;
 		flex-direction: row;
 		justify-content: space-between;
+		transition: 0.2s ease box-shadow;
+	}
+	#navbar.floating {
+		box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
 	}
 	#navbar_header {
 		display: flex;

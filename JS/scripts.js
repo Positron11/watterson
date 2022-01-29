@@ -43,6 +43,15 @@ var calendar = {
 $(function() {
 	changeContent(content);
 	updateDisplayDate();
+
+	// float navbar
+	$(window).scroll(function() {
+		if (($("#navbar").offset().top - $(window).scrollTop()) < 6 && !$("#navbar").hasClass("floating")) {
+			$("#navbar").addClass("floating")
+		} else if (($("#navbar").offset().top - $(window).scrollTop()) >= 6 && $("#navbar").hasClass("floating")) {
+			$("#navbar").removeClass("floating")
+		}
+	});
 });
 
 
