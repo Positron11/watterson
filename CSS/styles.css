@@ -1,63 +1,67 @@
-/* font */
+/* FONT */
+
 @font-face {
 	font-family: Calvin and Hobbes;
 	src: url(../Assets/Fonts/Calvin_Hobbes/solid.ttf);
 }
 
 
-/* tags */
+/* TAGS */
+
 html, body {
 	margin: 0;
 	padding: 0;
-	width: 100%;
-	height: 100%;
-	color: black;
+	color: #111;
 	font-size: 18px;
 	user-select: none;
 	font-family: "Calvin and Hobbes";
 }
+
 a {
 	color: inherit;
 	text-decoration: none;
 }
 
-/* generic comic border style */
+
+/* GENERIC STYLES */
+
 .comic-border {
 	border: 0.56em solid transparent;
-	border-image-source: url(../Images/border.png);
+	border-image: url(../Assets/Images/border.png) 7% round;
 	border-image-outset: 0.12em 0.18em 0.19em 0.25em;
-	border-image-repeat: round;
-	border-image-slice: 7%;
+
 }
 
-/* major containers */
-#page {
-	text-align: center;
+.clickable {
+	cursor: pointer;
 }
+
+.oi {
+	font-size: 0.7em;
+}
+
+
+/* MAIN CONTAINER */
+
 #main {
 	gap: 1em;
-	padding: 3em 0;
-	align-items: start;
-	display: inline-grid;
-	grid-template-areas: "banner navbar" "content navbar" "footer footer";
-}
-
-/* mobile header image */
-#mobile_header_image {
-	width: 70%;
-	display: none;
-	max-width: 340px;
-	margin: 2em 0 -1em 0;
-}
-
-/* title banner */
-#banner {
+	display: grid;
 	padding: 1em 0;
-	text-align: center;
-	grid-area: banner;
+	align-items: start;
+	justify-content: center;
+	grid-template-areas: "banner navbar" "content navbar" "footer navbar";
 }
-#banner_text_container {
-	display: inline-block;
+
+
+/* PAGE HEADER */
+
+#banner {
+	gap: 0.5em;
+	display: flex;
+	padding: 0.5em 1em;
+	align-items: center;
+	justify-content: center;
+	grid-area: banner;
 }
 #banner_title {
 	font-size: 3em;
@@ -66,16 +70,19 @@ a {
 	font-size: 0.4em;
 }
 #banner_author {
-	text-align: right;
 	font-size: 0.8em;
+	text-align: right;
 }
 
-/* navbar */
+
+/* NAVBAR */
+
 #navbar {
 	top: 1em;
 	width: 200px;
 	display: flex;
 	position: sticky;
+	text-align: center;
 	padding: 1em 0 0 0;
 	align-items: center;
 	flex-direction: column;
@@ -83,37 +90,34 @@ a {
 	background-color: white;
 	grid-area: navbar;
 }
-#navbar_heading {
+#navbar_date_caption {
 	font-size: 0.8em;
 }
 #navbar_date {
-	cursor: pointer;
 	font-size: 1.5em;
-	margin-bottom: 0.7em;
 }
 #navbar_links {
 	gap: 0.2em;
 	display: flex;
+	margin-top: 1.5em;
 	flex-direction: column;
 }
 #desktop_navbar_image {
 	width: 100%;
 	margin-top: 1em;
 }
-.navbar-link {
-	cursor: pointer;
-}
 .navbar-link.disabled {
 	color: #aaa;
 	cursor: not-allowed;
 }
 
-/* content hider classes */
+
+/* CONTENT */
+
 .content.hidden, .content-specific.hidden {
 	display: none !important;
 }
 
-/* calendar grid */
 #calendar {
 	gap: 0.3em;
 	display: grid;
@@ -126,6 +130,7 @@ a {
 	width: 1.49em;
 	cursor: pointer;
 	font-size: 0.9em;
+	text-align: center;
 }
 .calendar-month.current {
 	color: white;
@@ -137,7 +142,6 @@ a {
 	cursor: default;
 }
 
-/* comics container */
 #comics {
 	gap: 1em;
 	display: flex;
@@ -145,55 +149,58 @@ a {
 	grid-area: content;
 }
 #comics img {
-	max-width: 100%;
+	width: 100%;
 }
 
-/* footer */
+
+/* FOOTER */
+
 #footer {
 	padding: 1em;
-	font-size: 0.9em;
+	font-size: 0.85em;
 	grid-area: footer;
 }
 
-/* mobile devices */
+
+/* BREAKPOINTS */
+
 @media only screen and (max-width: 900px) {
-	#mobile_header_image {
-		display: unset;
-	}
 	#main {
 		gap: 0.5em;
 		padding: 1em;
 		grid-template-areas: "banner" "navbar" "content" "footer";
+	}
+	#banner {
+		justify-content: flex-end;
+		background: url(../Assets/Images/banner_illustration.jpeg) left center/contain no-repeat ;
 	}
 	#navbar {
 		top: 0.3em;
 		width: unset;
 		padding: 0 1em;
 		flex-direction: row;
-		justify-content: space-between;
 		transition: 0.2s ease box-shadow;
 	}
-	#navbar.floating {
-		box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-	}
-	#navbar_header {
-		display: flex;
-		align-items: center;
+	#navbar_date_caption {
+		margin-right: 0.5em;
 	}
 	#navbar_date {
-		font-size: 1em;
-		margin: 0 auto 0 0.5em;
+		font-size: 0.8em;
 	}
 	#navbar_links {
 		gap: 0.8em;
+		font-size: 0.8em;
+		margin: 0 0 0 auto;
 		flex-direction: row;
 	}
 	#desktop_navbar_image {
 		display: none;
 	}
+	#navbar.floating {
+		box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+	}
 }
 
-/* smaller mobile devices */
 @media only screen and (max-width: 640px) {
 	body {
 		font-size: 2.8vw;

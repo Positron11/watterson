@@ -190,4 +190,7 @@ function changeContent(new_content) {
 	}
 
 	updateLocalStorage();
+
+	// scroll to top
+	window.scrollTo(0, 0);
 }

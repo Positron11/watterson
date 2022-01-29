@@ -22,67 +22,61 @@
 	<meta property="og:title" content="The Watterson Archives">
 	<meta property="og:article:author" content="Aarush Kumbhakern">
 	<meta property="og:description" content="A collection of the Calvin and Hobbes comic strips by Bill Watterson.">
-	<meta property="og:image" content="http://calvinandhobbes.rf.gd/Images/og_thumbnail.jpg">
+	<meta property="og:image" content="http://calvinandhobbes.rf.gd/Assets/Images/og_thumbnail.jpg">
 
 	<!-- Twitter article meta tags -->
 	<meta name="twitter:card" content="summary_large_image">
 
-	<link rel="shortcut icon" type="image/png" href="Images/favicon.png">
-	<link rel="stylesheet" href="Assets/Open_Iconic/css/open-iconic.css">
+	<link rel="shortcut icon" type="image/png" href="Assets/Images/favicon.png">
+	<link rel="stylesheet" href="Assets/Icons/css/open-iconic.css">
 	<link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>	
-	<!-- page container -->
-	<div id="page">
-		<!-- mobile header image -->
-		<img src="Images/mobile_header.png" id="mobile_header_image">
-
-		<!-- main page grid -->
-		<div id="main">
-			<!-- title banner -->
-			<div id="banner" class="comic-border">
-				<div id="banner_text_container">
-					<div id="banner_title">Calvin <small>and</small> Hobbes</div>
-					<div id="banner_author">By Bill Watterson</div>
-				</div>
+	<!-- main page grid -->
+	<div id="main">
+		<!-- title banner -->
+		<div id="banner" class="comic-border">
+			<div id="banner_text_container">
+				<div id="banner_title" class="clickable" onclick="changeContent('calendar');">Calvin <small>and</small> Hobbes</div>
+				<div id="banner_author">By Bill Watterson</div>
 			</div>
-			
-			<!-- calendar container -->
-			<div id="calendar" class="content hidden"></div>
-
-			<!-- comics container -->
-			<div id="comics" class="content hidden"></div>	
+		</div>
 		
-			<!-- navbar -->
-			<div id="navbar" class="comic-border">
-				<!-- navbar header -->
-				<div id="navbar_header">
-					<div id="navbar_heading">
-						<!-- if on comics page -->
-						<span class="content-specific comics-specific">Currently</span>
-						<!-- if on calendar page -->
-						<span class="content-specific calendar-specific">Last</span>
-						reading:
-					</div>
-					<div id="navbar_date" onclick="comicJump(this);"></div>
-				</div>
+		<!-- calendar container -->
+		<div id="calendar" class="content hidden"></div>
 
-				<!-- navbar navigation links -->
-				<div id="navbar_links" class="content-specific comics-specific hidden">
-					<div class="navbar-link" id="nav_prev" onclick="comicBrowse('prev');"><span class="oi" data-glyph="arrow-thick-left" aria-hidden="true" style="font-size: 0.7em;"></span> Previous</div>
-					<div class="navbar-link" id="nav_cal" onclick="changeContent('calendar');">Calendar</div>
-					<div class="navbar-link" id="nav_next" onclick="comicBrowse('next');">Next <span class="oi" data-glyph="arrow-thick-right" aria-hidden="true" style="font-size: 0.7em;"></span></div>
-				</div>
-
-				<!-- desktop navbar illustration -->
-				<img src="Images/navbar_illustration.png" id="desktop_navbar_image">
+		<!-- comics container -->
+		<div id="comics" class="content hidden"></div>	
+	
+		<!-- navbar -->
+		<div id="navbar" class="comic-border">
+			<!-- navbar current date caption -->
+			<div id="navbar_date_caption">
+				<!-- if on comics page -->
+				<span class="content-specific comics-specific hidden">Currently</span>
+				<!-- if on calendar page -->
+				<span class="content-specific calendar-specific hidden">Last</span>
+				reading: 
 			</div>
 
-			<!-- footer -->
-			<div id="footer" class="comic-border">
-				"It’s a magical world, Hobbes, ol’ buddy…Let’s go exploring!" - Calvin and Hobbes, 1985-1995
+			<!-- navbar date -->
+			<div id="navbar_date" class="clickable" onclick="comicJump(this);"></div>
+
+			<!-- navbar navigation links -->
+			<div id="navbar_links" class="content-specific comics-specific hidden">
+				<div id="nav_prev" class="navbar-link clickable" onclick="comicBrowse('prev');"><span class="oi" data-glyph="arrow-thick-left" aria-hidden="true"></span> Previous</div>
+				<div id="nav_cal" class="navbar-link clickable" onclick="changeContent('calendar');">Calendar</div>
+				<div id="nav_next" class="navbar-link clickable" onclick="comicBrowse('next');">Next <span class="oi" data-glyph="arrow-thick-right" aria-hidden="true"></span></div>
 			</div>
+
+			<!-- desktop navbar illustration -->
+			<img src="Assets/Images/navbar_illustration.png" id="desktop_navbar_image">
+		</div>
+
+		<!-- footer -->
+		<div id="footer" class="comic-border">
+			"It’s a magical world, Hobbes, ol’ buddy…Let’s go exploring!" - Calvin and Hobbes, 1985-1995
 		</div>
 	</div>
 	
