@@ -105,6 +105,9 @@ a {
 	align-items: center;
 	justify-content: space-around;
 }
+.navbar-link .oi {
+	padding: 0.5em 1em;
+}
 .navbar-link.disabled {
 	color: #aaa;
 	cursor: not-allowed;
@@ -191,8 +194,7 @@ a {
 		display: none;
 	}
 	#navbar_links {
-		gap: 0.8em;
-		padding: 0 0.8em;
+		gap: 0.4em;
 		font-size: 0.85em;
 	}
 	#navbar.floating>* {
