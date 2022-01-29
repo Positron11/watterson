@@ -25,6 +25,7 @@ a {
 .comic-border {
 	border: 0.56em solid transparent;
 	border-image-source: url(../Images/border.png);
+	border-image-outset: 0.12em 0.18em 0.19em 0.25em;
 	border-image-repeat: round;
 	border-image-slice: 7%;
 }
