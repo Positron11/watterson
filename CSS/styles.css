@@ -128,8 +128,9 @@ a {
 	font-size: 0.9em;
 }
 .calendar-month.current {
-	transform: rotate(10deg);
-	animation: shake infinite 1s;
+	color: white;
+	transform: scale(0.8);
+	background-color: #111;
 }
 .calendar-month.disabled {
 	color: #aaa;
@@ -197,14 +198,4 @@ a {
 	body {
 		font-size: 2.8vw;
 	}
-}
-
-/* shake animation */
-@keyframes shake {
-	0% { transform: skewX(-15deg); }
-	10% { transform: skewX(15deg); }
-	20% { transform: skewX(-15deg); }
-	30% { transform: skewX(15deg); }
-	40% { transform: skewX(0deg); }
-	100% { transform: skewX(0deg); }  
 }
