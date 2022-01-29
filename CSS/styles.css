@@ -36,7 +36,7 @@ a {
 }
 #main {
 	gap: 1em;
-	padding: 1em;
+	padding: 3em 0;
 	align-items: start;
 	display: inline-grid;
 	grid-template-areas: "banner navbar" "content navbar" "footer footer";
@@ -160,8 +160,8 @@ a {
 		display: unset;
 	}
 	#main {
-		padding: 1em;
 		gap: 0.5em;
+		padding: 1em;
 		grid-template-areas: "banner" "navbar" "content" "footer";
 	}
 	#navbar {
