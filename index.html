@@ -50,28 +50,30 @@
 		<div id="comics" class="content hidden"></div>	
 	
 		<!-- navbar -->
-		<div id="navbar" class="comic-border">
-			<!-- navbar current date caption -->
-			<div id="navbar_date_caption">
-				<!-- if on comics page -->
-				<span class="content-specific comics-specific hidden">Currently</span>
-				<!-- if on calendar page -->
-				<span class="content-specific calendar-specific hidden">Last</span>
-				reading: 
+		<div id="navbar">
+			<div id="navbar_date_display" class="comic-border">
+				<!-- navbar current date caption -->
+				<div id="navbar_date_caption">
+					<!-- if on comics page -->
+					<span class="content-specific comics-specific hidden">Currently</span>
+					<!-- if on calendar page -->
+					<span class="content-specific calendar-specific hidden">Previously</span>
+					reading: 
+				</div>
+				
+				<!-- navbar date -->
+				<div id="navbar_date" class="clickable" onclick="comicJump(this);"></div>
+				
+				<!-- desktop navbar illustration -->
+				<img src="Assets/Images/navbar_illustration.png" id="desktop_navbar_image">
 			</div>
-
-			<!-- navbar date -->
-			<div id="navbar_date" class="clickable" onclick="comicJump(this);"></div>
 
 			<!-- navbar navigation links -->
-			<div id="navbar_links" class="content-specific comics-specific hidden">
-				<div id="nav_prev" class="navbar-link clickable" onclick="comicBrowse('prev');"><span class="oi" data-glyph="arrow-thick-left" aria-hidden="true"></span> Previous</div>
+			<div id="navbar_links" class="content-specific comics-specific hidden comic-border">
+				<div id="nav_prev" class="navbar-link clickable" onclick="comicBrowse('prev');"><span class="oi" data-glyph="arrow-thick-left" aria-hidden="true"></span></div>
 				<div id="nav_cal" class="navbar-link clickable" onclick="changeContent('calendar');">Calendar</div>
-				<div id="nav_next" class="navbar-link clickable" onclick="comicBrowse('next');">Next <span class="oi" data-glyph="arrow-thick-right" aria-hidden="true"></span></div>
+				<div id="nav_next" class="navbar-link clickable" onclick="comicBrowse('next');"><span class="oi" data-glyph="arrow-thick-right" aria-hidden="true"></span></div>
 			</div>
-
-			<!-- desktop navbar illustration -->
-			<img src="Assets/Images/navbar_illustration.png" id="desktop_navbar_image">
 		</div>
 
 		<!-- footer -->

@@ -79,32 +79,31 @@ a {
 
 #navbar {
 	top: 1em;
+	gap: 1em;
 	width: 200px;
 	display: flex;
 	position: sticky;
-	text-align: center;
-	padding: 1em 0 0 0;
-	align-items: center;
 	flex-direction: column;
-	justify-content: center;
-	background-color: white;
 	grid-area: navbar;
 }
+#navbar_date_display {
+	text-align: center;
+	padding: 1em 0 0 0;
+}	
 #navbar_date_caption {
 	font-size: 0.8em;
 }
 #navbar_date {
-	font-size: 1.5em;
-}
-#navbar_links {
-	gap: 0.2em;
-	display: flex;
-	margin-top: 1.5em;
-	flex-direction: column;
+	font-size: 1.3em;
 }
 #desktop_navbar_image {
 	width: 100%;
-	margin-top: 1em;
+	margin: 1em 0 0 0;
+}
+#navbar_links {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 .navbar-link.disabled {
 	color: #aaa;
@@ -176,27 +175,28 @@ a {
 	}
 	#navbar {
 		top: 0.3em;
+		gap: 0.5em;
 		width: unset;
-		padding: 0 1em;
 		flex-direction: row;
-		transition: 0.2s ease box-shadow;
 	}
-	#navbar_date_caption {
-		margin-right: 0.5em;
+	#navbar_date_display {
+		padding: 0;
+		flex-grow: 1;
 	}
-	#navbar_date {
-		font-size: 0.8em;
-	}
-	#navbar_links {
-		gap: 0.8em;
-		font-size: 0.8em;
-		margin: 0 0 0 auto;
-		flex-direction: row;
+	#navbar_date_caption, #navbar_date {
+		font-size: 0.85em;
+		display: inline-block;
 	}
 	#desktop_navbar_image {
 		display: none;
 	}
-	#navbar.floating {
+	#navbar_links {
+		gap: 0.8em;
+		padding: 0 0.8em;
+		font-size: 0.85em;
+	}
+	#navbar.floating>* {
+		background-color: white;
 		box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
 	}
 }
