@@ -105,8 +105,8 @@ a {
 	align-items: center;
 	justify-content: space-around;
 }
-.navbar-link .oi {
-	padding: 0.5em 1em;
+#nav_prev, #nav_next {
+	padding: 0 1em;
 }
 .navbar-link.disabled {
 	color: #aaa;
