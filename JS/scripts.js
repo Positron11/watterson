@@ -91,7 +91,7 @@ function drawCalendar() {
 		} else {
 			var cal_m = (i - 1) % 13;
 			var current_date = cal_y == year && cal_m == month ? " current" : "";
-			var date_data = i < 12 ? " disabled'" : " comic-border' data-year='" + cal_y + "' data-month='" + cal_m + "' onclick='comicJump(this);'";
+			var date_data = i < 12 ? " disabled'" : " card' data-year='" + cal_y + "' data-month='" + cal_m + "' onclick='comicJump(this);'";
 			$("#calendar").append("<div class='calendar-month" + current_date + date_data + ">" + cal_m + "</div>");
 		}
 	}

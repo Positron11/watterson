@@ -29,20 +29,15 @@ a {
 
 /* GENERIC STYLES */
 
-.comic-border {
+.card {
+	background-color: white;
 	border: 0.56em solid transparent;
 	border-image: url(../Assets/Images/border.png) 7% round;
-	border-image-outset: 0.12em 0.18em 0.2em 0.27em;
-
+	border-image-outset: 0.1em 0.2em 0.2em 0.3em;
 }
 
 .clickable {
 	cursor: pointer;
-}
-
-.card {
-	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .oi {
