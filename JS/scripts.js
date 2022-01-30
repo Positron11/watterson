@@ -52,6 +52,19 @@ $(function() {
 			$("#navbar").removeClass("floating")
 		}
 	});
+
+	// keyboard shortcuts
+	$("body").keydown(function(e) {
+		if(e.keyCode == 37 && content == "comics") { // left
+			comicBrowse("prev");
+		}
+		else if(e.keyCode == 39 && content == "comics") { // right
+			comicBrowse("next");
+		}
+		else if(e.keyCode == 67) { // c
+			changeContent(content == "comics" ? "calendar" : "comics");
+		}
+	  });
 });
 
 
