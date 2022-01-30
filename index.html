@@ -36,7 +36,7 @@
 	<!-- main page grid -->
 	<div id="main">
 		<!-- title banner -->
-		<div id="banner" class="comic-border">
+		<div id="banner" class="comic-border card">
 			<div id="banner_text_container">
 				<div id="banner_title" class="clickable" onclick="changeContent('calendar');">Calvin <small>and</small> Hobbes</div>
 				<div id="banner_author">By Bill Watterson</div>
@@ -44,14 +44,14 @@
 		</div>
 		
 		<!-- calendar container -->
-		<div id="calendar" class="content hidden"></div>
+		<div id="calendar" class="content hidden comic-border card"></div>
 
 		<!-- comics container -->
-		<div id="comics" class="content hidden"></div>	
+		<div id="comics" class="content hidden comic-border card"></div>	
 	
 		<!-- navbar -->
 		<div id="navbar">
-			<div id="navbar_date_display" class="comic-border">
+			<div id="navbar_date_display" class="comic-border card">
 				<!-- navbar current date caption -->
 				<div id="navbar_date_caption">
 					<!-- if on comics page -->
@@ -69,7 +69,7 @@
 			</div>
 
 			<!-- navbar navigation links -->
-			<div id="navbar_links" class="content-specific comics-specific hidden comic-border">
+			<div id="navbar_links" class="content-specific comics-specific hidden comic-border card">
 				<div id="nav_prev" class="navbar-link clickable" onclick="comicBrowse('prev');" title="Shortcut: &lt;left arrow&gt;"><span class="oi" data-glyph="arrow-thick-left" aria-hidden="true"></span></div>
 				<div id="nav_cal" class="navbar-link clickable" onclick="changeContent('calendar');" title="Shortcut: &lt;c&gt;">Calendar</div>
 				<div id="nav_next" class="navbar-link clickable" onclick="comicBrowse('next');" title="Shortcut: &lt;right arrow&gt;"><span class="oi" data-glyph="arrow-thick-right" aria-hidden="true"></span></div>
@@ -77,7 +77,7 @@
 		</div>
 
 		<!-- footer -->
-		<div id="footer" class="comic-border">
+		<div id="footer" class="comic-border card">
 			"It’s a magical world, Hobbes, ol’ buddy…Let’s go exploring!" - Calvin and Hobbes, 1985-1995
 		</div>
 	</div>

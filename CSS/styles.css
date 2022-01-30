@@ -14,6 +14,10 @@ html, body {
 	color: #111;
 	font-size: 18px;
 	user-select: none;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center top;
+	background-image: url(../Assets/Images/background.jpg);
 	font-family: "Calvin and Hobbes";
 }
 
@@ -34,6 +38,11 @@ a {
 
 .clickable {
 	cursor: pointer;
+}
+
+.card {
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .oi {
@@ -174,10 +183,10 @@ a {
 	}
 	#banner {
 		justify-content: flex-end;
-		background: url(../Assets/Images/banner_illustration.jpeg) left center/contain no-repeat ;
+		background: white url(../Assets/Images/banner_illustration.jpeg) left center/contain no-repeat ;
 	}
 	#navbar {
-		top: 0.3em;
+		top: 0.4em;
 		gap: 0.5em;
 		width: unset;
 		flex-direction: row;
@@ -185,6 +194,7 @@ a {
 	#navbar_date_display {
 		padding: 0;
 		flex-grow: 1;
+		transition: 0.2s ease box-shadow;
 	}
 	#navbar_date_caption, #navbar_date {
 		font-size: 0.85em;
@@ -197,9 +207,14 @@ a {
 		gap: 0.4em;
 		font-size: 0.85em;
 	}
+	#navbar, #navbar_date_display, #navbar_links {
+		transition: 0.2s ease box-shadow, 0.2s ease transform;
+	}
+	#navbar.floating {
+		transform: scale(1.03);
+	}
 	#navbar.floating>* {
-		background-color: white;
-		box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+		box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 	}
 }
 
