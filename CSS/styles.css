@@ -14,10 +14,6 @@ html, body {
 	color: #111;
 	font-size: 18px;
 	user-select: none;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center top;
-	/* background-image: url(../Assets/Images/background.jpg); */
 	font-family: "Calvin and Hobbes";
 }
 
