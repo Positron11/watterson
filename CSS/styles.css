@@ -17,7 +17,7 @@ html, body {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center top;
-	background-image: url(../Assets/Images/background.jpg);
+	/* background-image: url(../Assets/Images/background.jpg); */
 	font-family: "Calvin and Hobbes";
 }
 
@@ -130,8 +130,9 @@ a {
 }
 
 #calendar {
-	gap: 0.3em;
+	gap: 0.5em;
 	display: grid;
+	padding: 0.5em;
 	align-items: center;
 	grid-template-rows: repeat(11, auto);
 	grid-template-columns: repeat(13, auto);
@@ -244,8 +245,8 @@ a {
 	}
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 670px) {
 	body {
-		font-size: 2.8vw;
+		font-size: 2.72vw;
 	}
 }
