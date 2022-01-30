@@ -175,35 +175,6 @@ a {
 }
 
 
-/* DEVICE SPECIFIC ANIMATIONS */
-
-@media (pointer: fine) {
-	.calendar-month, .navbar-link {
-		transition: 0.1s ease box-shadow, 0.1s ease transform;
-	}
-	.calendar-month:hover:not(.current, .disabled) {
-		transform: scale(1.1);
-		box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-	}
-	.calendar-month:active:not(.current, .disabled) {
-		box-shadow: none;
-		transform: scale(1);
-	}
-	#nav_cal:hover {
-		transform: scale(1.1);
-	}
-	#nav_prev:hover, #nav_next:hover {
-		transform: scale(1.4) rotate(10deg);
-	}
-	#nav_prev:hover, #nav_next:hover {
-		transform: scale(1.4) rotate(10deg);
-	}
-	.navbar-link:active {
-		transform: scale(1) rotate(0deg) !important;
-	}
-}
-
-
 /* BREAKPOINTS */
 
 @media only screen and (max-width: 900px) {
