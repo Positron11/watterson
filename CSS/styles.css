@@ -203,21 +203,6 @@ a {
 	}
 }
 
-@media (pointer: coarse) {
-	.calendar-month, .navbar-link {
-		transition: 0.05s ease-out box-shadow, 0.05s ease-out transform;
-	}
-	.calendar-month:active:not(.current, .disabled) {
-		transform: scale(0.8);
-	}
-	#nav_cal:active {
-		transform: scale(0.9);
-	}
-	#nav_prev:active, #nav_next:active {
-		transform: scale(0.8) rotate(10deg);
-	}
-}
-
 
 /* BREAKPOINTS */
 
