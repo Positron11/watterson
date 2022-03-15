@@ -29,7 +29,8 @@ a {
 .card {
 	background-color: white;
 	border: 0.56em solid transparent;
-	border-image: url(../Assets/Images/border.png) 7% round;
+	-webkit-border-image: url(../Assets/Images/border.png) 13 repeat;
+	-moz-border-image: url(../Assets/Images/border.png) 7% round;
 	border-image-outset: 0.08em 0.2em 0.2em 0.25em;
 }
 
